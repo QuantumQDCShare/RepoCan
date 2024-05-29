@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SHC demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+  <div class="">
+    <div class="row">
+      <div class="col-md-12 pe-0">
+        <!-- html banner debut -->
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <div class="logo-banner"></div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <div class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Régie de l’assurance maladie</a>
+                </div>
+              </div>
+              <span class="navbar-text">
+                <a class="nav-link" href="#">Nous joindre</a>
+              </span>
+            </div>
+          </div>
+        </nav>
+        <!-- html banner fin -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 bordure-droit pe-0">
+        <!-- html menu-gauche debut -->
+        <figure>
+          <blockquote class="blockquote">
+            <p>Système d’assurance<br /> hospitalisation interprovinciale</p>
+          </blockquote>
+        </figure>
+        <div class="accordion accordion-flush" id="menu-gauche">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#rechercher" aria-expanded="false" aria-controls="rechercher">
+                Rechercher
+              </button>
+            </h2>
+            <div id="rechercher" class="accordion-collapse collapse" data-bs-parent="#rechercher">
+              <div class="accordion-body">********Rechercher********</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#saisir" aria-expanded="false" aria-controls="saisir">
+                Saisir
+              </button>
+            </h2>
+            <div id="saisir" class="accordion-collapse collapse" data-bs-parent="#saisir">
+              <div class="accordion-body">********Saisir********</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#autoriserPaiement" aria-expanded="false" aria-controls="autoriserPaiement">
+                Autoriser le paiement
+              </button>
+            </h2>
+            <div id="autoriserPaiement" class="accordion-collapse collapse" data-bs-parent="#autoriserPaiement">
+              <div class="accordion-body">********Autoriser le paiement********</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#piloter" aria-expanded="false" aria-controls="piloter">
+                Piloter
+              </button>
+            </h2>
+            <div id="piloter" class="accordion-collapse collapse" data-bs-parent="#piloter">
+              <div class="accordion-body">
+                <div class="list-group list-group-flush">
+                  <a class="list-group-item list-group-item-action border border-0">Parametres d'exploitation</a>
+                  <a class="list-group-item list-group-item-action border border-0">Messages Explicatif</a>
+                  <a uiSref="delaisDeTransfert" class="list-group-item list-group-item-action border border-0">Delais de
+                    transfert</a>
+                  <a class="list-group-item list-group-item-action border border-0">Criteres pour evaluer une
+                    demande</a>
+                  <a class="list-group-item list-group-item-action border border-0">Normes de gestion</a>
+                  <a uiSref="organismesProvinciaux"
+                    class="list-group-item list-group-item-action border border-0">Organismes
+                    provinciaux</a>
+                  <a class="list-group-item list-group-item-action border border-0">Etablissements hors Quebec</a>
+                  <a class="list-group-item list-group-item-action border border-0">Etablissements hors Quebec</a>
+                  <a class="list-group-item list-group-item-action border border-0">Etablissements hors Quebec</a>
+                  <a class="list-group-item list-group-item-action border border-0">Etablissements hors Quebec</a>
+                  <a class="list-group-item list-group-item-action border border-0">Etablissements hors Quebec</a>
+                  <a class="list-group-item list-group-item-action border border-0">Etablissements hors Quebec</a>
+                  <a class="list-group-item list-group-item-action border border-0">Etablissements hors Quebec</a>
+                  <a class="list-group-item list-group-item-action border border-0">Etablissements hors Quebec</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- html menu-gauche fin -->
+      </div>
+      <div class="col-md-9 ">
+        <!-- html titire debut -->
+        <div class="row">
+          <p class="h1 h-titre div-avec-bordure">Messages explicatifs</p>
+        </div>
+        <!-- html titire fin -->
+        <!-- html obligatoires debut -->
+        <div class="row">
+          <p class="p-obligatoire">
+            Les champs suivis d’un <mark>*</mark> sont obligatoires.
+          </p>
+        </div>
+        <!-- html obligatoires fin -->
+        <!-- html alert debut -->
+        <!--      <div class="row">
+           <div class="alert-msg ms-2 me-3">
+            <p class="p-alert">6 erreurs ont été trouvées :</p>
+            <ul class="champ-alert-msg tiret-ul">
+              <li>Numéro de message</li>
+              <li>Catégorie</li>
+              <li>Texte du message français</li>
+              <li>Code de sévérité</li>
+              <li>Indicateur d’affichage</li>
+              <li>Type de message</li>
+            </ul>
+          </div> 
+
+        </div> -->
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <p><i class="bi bi-exclamation-circle-fill"></i> 6236 - Sévère - Aucune valeur dans un champ obligatoire.</p>
+          <p><i class="bi bi-exclamation-circle-fill"></i> 6236 - Sévère - Aucune valeur dans un champ obligatoire.</p>
+          <p><i class="bi bi-exclamation-circle-fill"></i> 6236 - Sévère - Aucune valeur dans un champ obligatoire.</p>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <i class="bi bi-check-circle-fill"></i> 6248 - Information - Le traitement a été exécuté avec succès.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <!-- html alert fin -->
+        <!-- html operation-buttons debut -->
+        <div class="row">
+          <div class="mt-4 mb-4">
+            <div class="operation-buttons form-check form-check-inline ps-0" id="">
+              <input type="radio" class="btn-check" name="operationButtons" id="btnCreer" value="Creer"
+                autocomplete="off">
+              <label class="btn btn-outline-primary" for="btnCreer"><i class="bi bi-plus-circle-fill"></i> Créer</label>
+            </div>
+            <div class="operation-buttons form-check form-check-inline ps-0">
+              <input class="btn-check" type="radio" name="operationButtons" id="btnModifier" value="Modifier"
+                autocomplete="off">
+              <label class="btn btn-outline-primary" for="btnModifier"><i class="bi bi-pencil-fill"></i>
+                Modifier</label>
+            </div>
+            <div class="operation-buttons form-check form-check-inline ps-0">
+              <input class="btn-check" type="radio" name="operationButtons" id="btnFermer" value="Fermer"
+                autocomplete="off">
+              <label class="btn btn-outline-primary" for="btnFermer"><i class="bi bi-x-circle-fill"></i> Fermer</label>
+            </div>
+            <div class="operation-buttons form-check form-check-inline ps-0">
+              <input class="btn-check" type="radio" name="operationButtons" id="btnRechercher" value="Rechercher"
+                autocomplete="off">
+              <label class="btn btn-outline-primary" for="btnRechercher"><i class="bi bi-search"></i> Rechercher</label>
+            </div>
+
+          </div>
+        </div>
+        <!-- html operation-buttons fin -->
+
+        <!-- html card debut -->
+        <div class="row">
+          <div class="card court">
+            <div class="card-header">Gérer un message explicatif</div>
+            <div class="card-body">
+              <!--               <form class="row">
+                <div class="col-md-3">
+                  <label for="numMsg" class="form-label erreur-form-label">Numéro du message *</label>
+                  <input type="text" class="form-control" id="numMsg" value="">
+                </div>
+                <div class="col-md-3">
+                  <label for="categorieMsg" class="form-label">Catégorie *</label>
+                  <select class="form-select" id="categorieMsg">
+                    <option selected disabled value="">Choose...</option>
+                    <option>1...</option>
+                    <option>2...</option>
+                    <option>3...</option>
+                    <option>4...</option>
+                    <option>5...</option>
+                    <option>6...</option>
+                    <option>7...</option>
+                  </select>
+                </div>
+
+                <div class="col-md-12 mt-4">
+                  <label for="textMsgFr" class="form-label erreur-form-label">Texte du message français *</label>
+                  <textarea class="form-control" id="textMsgFr" rows="3"></textarea>
+                </div>
+                <div class="col-md-12 mt-4">
+                  <label for="noteMsgFr" class="form-label">Note supplémentaire du message français</label>
+                  <textarea class="form-control" id="noteMsgFr" rows="3"></textarea>
+                </div>
+                <div class="col-md-12 mt-4">
+                  <label for="textMsgAn" class="form-label">Texte du message anglais</label>
+                  <textarea class="form-control" id="textMsgAn" rows="3"></textarea>
+                </div>
+                <div class="col-md-12 mt-4">
+                  <label for="noteMsgAn" class="form-label">Note supplémentaire du message anglais</label>
+                  <textarea class="form-control" id="noteMsgAn" rows="3"></textarea>
+                </div>
+
+                <div class="col-md-3 mt-4">
+                  <label for="dateDebutMsg" class="form-label">Date de début</label>
+                  <input type="date" class="form-control" id="dateDebutMsg" value="">
+                </div>
+                <div class="col-md-3 mt-4">
+                  <label for="DateFinMsg" class="form-label">Date de fin</label>
+                  <input type="date" class="form-control" id="DateFinMsg" value="">
+                </div>
+                <div class="col-md-3 mt-4">
+                  <label for="codeSrvMsg" class="form-label erreur-form-label">Code de sévérité *</label>
+                  <select class="form-select" id="codeSrvMsg">
+                    <option selected disabled value="">Choose...</option>
+                    <option>1...</option>
+                    <option>2...</option>
+                    <option>3...</option>
+                  </select>
+                </div>
+                <div class="col-md-3 mt-4">
+                  <label for="indicateurAffMsg" class="form-label erreur-form-label">Indicateur d’affichage
+                    *</label><br />
+
+                  <div class="form-check form-check-inline pt-2">
+                    <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                      value="option1">
+                    <label class="form-check-label ms-3" for="inlineRadio1">Oui</label>
+                  </div>
+                  <div class="form-check form-check-inline pt-2">
+                    <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                      value="option2">
+                    <label class="form-check-label ms-3" for="inlineRadio2">Non</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-4">
+                  <label for="typeMsg" class="form-label erreur-form-label">Type de message *</label>
+                  <select class="form-select" id="typeMsg">
+                    <option selected disabled value="">Choose...</option>
+                    <option>1...</option>
+                    <option>2...</option>
+                    <option>3...</option>
+                    <option>4...</option>
+                    <option>5...</option>
+                    <option>6...</option>
+                    <option>7...</option>
+                  </select>
+                </div>
+
+              </form>  -->
+              <form class="row needs-validation" novalidate>
+                <div class="col-md-3">
+                  <label for="numMsg" class="form-label">Numéro du message</label>
+                  <input type="text" class="form-control" id="numMsg" value="" required>
+                  <div class="invalid-feedback">
+                    Le Numéro du message est Obligatoir
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="categorieMsg" class="form-label">Catégorie</label>
+                  <select class="form-select" id="categorieMsg" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1...</option>
+                    <option>2...</option>
+                    <option>3...</option>
+                    <option>4...</option>
+                    <option>5...</option>
+                    <option>6...</option>
+                    <option>7...</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Le Catégorie est Obligatoir
+                  </div>
+                </div>
+                <div class="col-md-12 mt-4">
+                  <label for="textMsgFr" class="form-label">Texte du message français</label>
+                  <textarea class="form-control" id="textMsgFr" rows="3" required></textarea>
+                  <div class="invalid-feedback">
+                    Le Texte du message français est Obligatoir
+                  </div>
+                </div>
+                <div class="col-md-12 mt-4">
+                  <label for="noteMsgFr" class="form-label">Note supplémentaire du message français</label>
+                  <textarea class="form-control" id="noteMsgFr" rows="3"></textarea>
+                </div>
+                <div class="col-md-12 mt-4">
+                  <label for="textMsgAn" class="form-label">Texte du message anglais</label>
+                  <textarea class="form-control" id="textMsgAn" rows="3"></textarea>
+                </div>
+                <div class="col-md-12 mt-4">
+                  <label for="noteMsgAn" class="form-label">Note supplémentaire du message anglais</label>
+                  <textarea class="form-control" id="noteMsgAn" rows="3"></textarea>
+                </div>
+                <div class="col-md-3 mt-4">
+                  <label for="dateDebutMsg" class="form-label">Date de début</label>
+                  <input type="date" class="form-control" id="dateDebutMsg" value="">
+                </div>
+                <div class="col-md-3 mt-4">
+                  <label for="DateFinMsg" class="form-label">Date de fin</label>
+                  <input type="date" class="form-control" id="DateFinMsg" value="">
+                </div>
+                <div class="col-md-3 mt-4">
+                  <label for="codeSrvMsg" class="form-label">Code de sévérité</label>
+                  <select class="form-select" id="codeSrvMsg" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1...</option>
+                    <option>2...</option>
+                    <option>3...</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Le Code de sévérité est Obligatoir
+                  </div>
+                </div>
+                <div class="col-md-3 mt-4">
+                  <!--                   <div class="form-group">
+                  <label for="indicateurAffMsg" class="form-label">Indicateur d’affichage</label><br />
+
+                  <div class="form-check form-check-inline pt-2">
+                    <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                      value="option1" required>
+                    <label class="form-check-label ms-3" for="inlineRadio1">Oui</label>
+
+                  </div>
+                  <div class="form-check form-check-inline pt-2">
+                    <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                      value="option2" required>
+                    <label class="form-check-label ms-3" for="inlineRadio2">Non</label>
+
+                  </div>
+                  <div class="invalid-feedback">
+                    L'Indicateur d’affichage est Obligatoir
+                  </div>
+                </div> -->
+                  <div class="form-group">
+                    <label for="indicateurAffMsg" class="form-label">Indicateur d’affichage</label><br />
+                    <div class="form-check form-check-inline pt-2">
+                      <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions"
+                        id="inlineRadioOptionsOui" value="oui" required>
+                      <label class="form-check-label ms-3" for="inlineRadioOptionsOui">Oui</label>
+                    </div>
+                    <div class="form-check form-check-inline pt-2">
+                      <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions"
+                        id="inlineRadioOptionsNon" value="non" required>
+                      <label class="form-check-label ms-3" for="inlineRadioOptionsNon">Non</label>
+                      <div class="invalid-feedback">
+                        <br /> L'Indicateur d’affichage est Obligatoir
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-4">
+                  <label for="typeMsg" class="form-label">Type de message</label>
+                  <select class="form-select" id="typeMsg" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1...</option>
+                    <option>2...</option>
+                    <option>3...</option>
+                    <option>4...</option>
+                    <option>5...</option>
+                    <option>6...</option>
+                    <option>7...</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Le Type de message est Obligatoir
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="card long mb-3">
+            <div class="card-header text-center">Message de traitement</div>
+            <div class="card-body">
+              <form class="row">
+                <div class="col-md-3">
+                  <label for="numMsgTrait" class="form-label ">Numéro du message </label>
+                  <input type="text" class="form-control" id="numMsgTrait" value="">
+                </div>
+                <div class="col-md-12 mt-4">
+                  <label for="textMsgFrTrait" class="form-label ">Texte du message français</label>
+                  <textarea class="form-control" id="textMsgFrTrait" rows="3"></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- html card fin -->
+        <div class="row">
+          <div class="col-md-3 mt-2 mb-5">
+            <button class="btn btn-primary" id="confirm-button" type="button">CONFIRMER</button>
+          </div>
+        </div>
+        <!-- html table resultat debut -->
+        <div class="titre-tableau mb-1">
+          <span class="badge">Messages explicatifs</span>
+        </div>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Numero d'organisme</th>
+              <th scope="col">Date de debut</th>
+              <th scope="col">Organisme</th>
+              <th scope="col">Province</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row" class="">1020062</td>
+              <td class="">2012-06-06</td>
+              <td class="">Organisme</td>
+              <td class="">Quebec</td>
+            </tr>
+            <tr>
+              <td scope="row" class="">1020062</td>
+              <td class="">2012-06-06</td>
+              <td class="">Organisme</td>
+              <td class="">Quebec</td>
+            </tr>
+            <tr>
+              <td scope="row" class="">1020062</td>
+              <td class="">2012-06-06</td>
+              <td class="">Organisme</td>
+              <td class="">Quebec</td>
+            </tr>
+            <tr>
+              <td scope="row" class="">1020062</td>
+              <td class="">2012-06-06</td>
+              <td class="">Organisme</td>
+              <td class="">Quebec</td>
+            </tr>
+            <tr>
+              <td scope="row" class="">1020062</td>
+              <td class="">2012-06-06</td>
+              <td class="">Organisme</td>
+              <td class="">Quebec</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- html table resultat fin  -->
+        <div class="row mb-4">
+          <div class="col-md-12">
+            <nav aria-label="...">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page"><span class="page-link">2</span></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">13</a></li>
+                <li class="page-item"><a class="page-link" href="#">14</a></li>
+                <li class="page-item"><a class="page-link" href="#">15</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row bordure-haut">
+      <!-- html footer debut -->
+      <footer class="py-3">
+        <ul class="nav justify-content-center ">
+          <li class="nav-item"><a href="#" class="nav-link px-2">Accessibilité</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2">Politique linguistique</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2">Sécurité et politique de confidentialité</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2">Aide</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2">Québec.ca <i class="bi bi-box-arrow-up-right"></i></a>
+          </li>
+        </ul>
+        <div class="logo-footer"></div>
+        <p class="text-center">© Gouvernement du Québec, 2024 <i class="bi bi-box-arrow-up-right"></i></p>
+      </footer>
+      <!-- html footer fin -->
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const forms = document.querySelectorAll('.needs-validation');
+      const confirmButton = document.getElementById('confirm-button');
+
+
+      if (confirmButton) {
+        confirmButton.addEventListener('click', () => {
+
+          Array.from(forms).forEach(form => {
+            if (!form.checkValidity()) {
+              form.classList.add('was-validated');
+
+            } else {
+
+              form.submit();
+            }
+          });
+        });
+      } else {
+        console.log('Confirm button not found');
+      }
+    });
+  </script>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-validator@0.6.0/dist/validator.min.js"></script>
+
+</body>
+
+</html>
